@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The bigger picture | Build your future</title>
+        <link rel="icon" href="assets/favicon.png">
+        <link rel="stylesheet" href="bootstrap_theme/bootstrap.css">
+        <link rel="stylesheet" href="https://use.typekit.net/fuq8mbg.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="journey.js" defer></script>
+        <script src="stat-reveal.js" defer></script>
+    </head>
+    <body id="stat-reveal-page" class="journey-page">
+        <main class="page-scene">
+            <div class="brand-logo">
+                <img src="assets/om-logo.png" alt="Old Mutual" width="80" height="120">
+            </div>
+            <!-- Same shared layout; the page ID controls this page's gradient. -->
+            <section class="page-unit" aria-labelledby="page-title">
+                <header class="page-heading">
+                    <div class="selection-banner">
+                        <p class="selection-label">Your selection:</p>
+                        <p class="selection-copy" id="selected-answer">One to under three months</p>
+                    </div>
+                    <h1 class="page-title" id="page-title" tabindex="-1">The bigger</h1>
+                    <p class="page-subtitle">Picture</p>
+                    <p class="reveal-intro" id="reveal-intro">Here's what working South Africans told us in the 2026 Old
+                    Mutual Savings &amp; Investment Monitor.</p>
+                </header>
+                <div class="white-backdrop">
+                    <div class="focus-icon">
+                        <img id="stat-focus-icon" src="assets/icons/income-loss-icon.svg" alt="" width="100" height="100">
+                    </div>
+                    <!-- Static editor sample; live statistics come from journey.js. -->
+                    <section class="container content-area stat-content" id="stat-content" aria-label="The bigger picture">
+                        <article class="stat-block">
+                            <h2 class="stat-value">1 in 2</h2>
+                            <p class="stat-copy">working South Africans say their money would last three months or less if
+                            they lost their income.</p>
+                        </article>
+                        <article class="stat-block">
+                            <h2 class="stat-value">53%</h2>
+                            <p class="stat-copy">are constantly worried about losing their income.</p>
+                        </article>
+                    </section>
+                    <div class="stat-reactions" id="stat-reactions" role="group" aria-label="Your reaction to this statistic">
+                        <button class="reaction-button" type="button" data-reaction="surprised" aria-label="That's surprising" aria-pressed="false" title="That's surprising" disabled>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/astonished.png" alt="" width="46" height="46"> </span>
+                        </button>
+                        <button class="reaction-button" type="button" data-reaction="concerned" aria-label="That's concerning" aria-pressed="false" title="That's concerning" disabled>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/frowning.png" alt="" width="46" height="46"> </span>
+                        </button>
+                        <button class="reaction-button" type="button" data-reaction="thoughtful" aria-label="Makes me think" aria-pressed="false" title="Makes me think" disabled>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/thinking-face.png" alt="" width="46" height="46"> </span>
+                        </button>
+                        <button class="reaction-button" type="button" data-reaction="prepared" aria-label="I feel prepared" aria-pressed="false" title="I feel prepared" disabled>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/fist.png" alt="" width="46" height="46"> </span>
+                        </button>
+                    </div>
+                </div>
+                <aside class="page-info" id="reaction-guide" aria-label="Reaction meanings">
+                    <ul>
+                        <li>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/astonished.png" alt="" width="22" height="22"> </span>
+                            <span>That's surprising</span>
+                        </li>
+                        <li>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/frowning.png" alt="" width="22" height="22"> </span>
+                            <span>That's concerning</span>
+                        </li>
+                        <li>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/thinking-face.png" alt="" width="22" height="22"> </span>
+                            <span>Makes me think</span>
+                        </li>
+                        <li>
+                            <span class="reaction-emoji" aria-hidden="true"> <img src="assets/emoji-pack/fist.png" alt="" width="22" height="22"> </span>
+                            <span>I feel prepared</span>
+                        </li>
+                    </ul>
+                </aside>
+                <p class="page-message" id="journey-error" role="alert" hidden></p>
+                <noscript>
+                    <p class="page-message">Please enable JavaScript to continue your journey.</p>
+                </noscript>
+            </section>
+        </main>
+        <div class="reaction-burst" id="reaction-burst" aria-hidden="true"></div>
+        <footer class="page-footer">
+            <div class="container">
+                <p><a href="">Privacy policy</a> | <a href="">Disclaimer</a> | <a href="">Company information</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

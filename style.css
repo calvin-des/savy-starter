@@ -1,0 +1,1715 @@
+:root {
+    /* brand primary colour */
+    --color-primary: #009677;
+
+    /* brand secondary colour */
+    --color-secondary: #50B848;
+
+    /* brand secondary colour */
+    --color-tertiary: #8DC63F;
+
+    /* brand dark accent */
+    --color-dark: #282828;
+    --color-black: #000000;
+
+    /* brand light accent */
+    --color-light: #ffffff;
+
+    /* brand font */
+    --brand-font: montserrat, Arial, sans-serif;
+
+    /* heritage-green to future green */
+    --main-gradient: linear-gradient(90deg, rgb(0, 150, 119) 0%, rgb(141, 198, 63) 100%);
+}
+
+h1 {
+    font-family: var(--brand-font);
+    font-weight: 800 !important;
+    font-style: normal;
+    color: var(--color-primary) !important;
+    font-size: calc(1.375rem + 1.5vw);
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--brand-font);
+    font-weight: 800;
+    font-style: normal;
+    color: var(--color-dark) !important;
+    font-size: calc(1.325rem + 0.9vw);
+    text-transform: none;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-family: var(--brand-font);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-primary);
+    font-size: calc(1.3rem + 0.6vw);
+    text-align: center;
+    padding-top: 10px;
+}
+
+h4 {
+    font-family: var(--brand-font);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-primary);
+    font-size: calc(1.275rem + 0.3vw);
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: var(--brand-font);
+    font-weight: 300;
+    font-style: normal;
+    color: var(--color-black);
+    font-size: 1.1rem;
+    padding-top: 0;
+    text-align: center;
+    margin-top: 0;
+    text-transform: none;
+}
+
+.headline-light {
+    font-family: var(--brand-font);
+    font-weight: 300 !important;
+    font-style: normal;
+    color: var(--color-light) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    color: var(--color-light);
+    width: 75%;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-family: var(--brand-font);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 20px;
+    background-image: var(--main-gradient);
+    border: 0;
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus-visible,
+.btn-primary:hover {
+    box-shadow: none !important;
+    outline: none;
+    color: var(--color-light) !important;
+    border: 0px none;
+    border-style: none !important;
+    transform: scaleX(1.01);
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid var(--color-dark);
+    outline-offset: 3px;
+}
+
+.btn-arrow {
+    width: 1em;
+    height: auto;
+    margin-left: .25rem;
+    animation: 1s infinite bounce;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(6px);
+    }
+}
+
+.btn-action {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    color: var(--color-primary);
+    padding: 10px 0px 5px;
+    font-family: var(--brand-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: inherit;
+}
+
+/* placeholder text */
+::placeholder {
+    font-family: var(--brand-font);
+    font-weight: 400;
+    font-style: normal;
+    color: #C7D9DA;
+}
+
+/* Shared Footer: Links and Spacing */
+.page-footer a {
+    color: var(--color-light) !important;
+    font-size: inherit;
+    text-decoration: none !important;
+}
+
+.page-footer a:is(:hover, :focus, :visited, :active) {
+    color: var(--color-light) !important;
+    text-decoration: none !important;
+}
+
+.page-footer {
+    padding: 18px 0;
+    background: var(--color-dark);
+}
+
+.page-footer p {
+    color: var(--color-light);
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* links */
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active {
+    color: var(--color-primary);
+}
+
+/* general layout */
+.body-content {
+    min-height: 58vh;
+    overflow: hidden;
+    display: block;
+    padding-bottom: 10vh;
+}
+
+.row {
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+body {
+    background-color: transparent;
+    min-height: 90vh;
+    background-image: url('assets/images/dotted-bg.png'), linear-gradient(to bottom, #fff 0%, #e5e5e5 100%);
+    background-repeat: repeat;
+    background-position: center top, center top;
+    background-size: contain;
+}
+
+/* Index: Photograph, Frame and Arrow Graphic */
+.hero {
+    position: relative;
+    isolation: isolate;
+    --hero-crop: 40px;
+    display: block;
+    overflow: hidden;
+    padding: 0 56px 34px;
+    margin-top: 0px;
+}
+
+.hero-stage::before {
+    content: "";
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    width: 154% !important;
+    aspect-ratio: 693.342 / 486.658;
+    transform: translateX(-50%);
+    background-image: url("assets/paths.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hero-stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px !important;
+}
+
+.home-hero {
+    position: relative;
+    width: 100%;
+    container-type: inline-size;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 0px 0px 48px 48px;
+    box-shadow: 0px 5px 5px rgba(80, 184, 72, 0.8);
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--color-light);
+    border-radius: inherit;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 4;
+    margin: 10px;
+    bottom: 0%;
+    top: -9%;
+}
+
+.home-hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 46%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 150, 119, 0.92) 0%,
+        rgba(0, 150, 119, 0.68) 45%,
+        rgba(0, 150, 119, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+.headline-holder {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 50;
+    bottom: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headline-holder h1 {
+    font-size: 32px;
+    font-size: min(32px, 9.3cqi);
+    line-height: 1.08;
+}
+
+.block-header {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 894 / 1370;
+}
+
+/* brand logo */
+.brand-logo {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 48px;
+    z-index: 3;
+}
+
+.brand-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* icons journey animation */
+.journey {
+    --journey-duration: 5.6s;
+    --journey-green: var(--color-tertiary);
+    width: 100%;
+    max-width: 920px;
+    margin-inline: auto;
+}
+
+.journey-flow {
+    position: relative;
+    aspect-ratio: 800 / 128;
+    isolation: isolate;
+}
+
+.journey-route {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.journey-dots,
+.journey-arrow {
+    fill: none;
+    stroke: var(--journey-green);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.journey-dots {
+    stroke-dasharray: 0.1 6;
+}
+
+.journey-reveal {
+    fill: none;
+    stroke: white;
+    stroke-width: 12;
+    stroke-linecap: butt;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: journey-draw var(--journey-duration) linear both;
+}
+
+.journey-arrow {
+    opacity: 0;
+    animation: journey-arrow-in .2s linear both;
+    animation-delay: var(--journey-duration);
+}
+
+/* Seven 104-unit columns share their centres with the SVG arcs. */
+.journey-steps {
+    position: absolute;
+    inset: 0 8% 0 1%;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.journey-steps li {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+
+.journey-icon {
+    display: block;
+    width: 76.923077%;
+    height: auto;
+    aspect-ratio: 1;
+    filter: drop-shadow(0 2px 2px rgb(0 70 45 / 16%));
+    animation: journey-step-in calc(var(--journey-duration) * .1) linear both;
+    animation-delay: calc(var(--journey-duration) * var(--i) * .136);
+}
+
+@keyframes journey-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes journey-step-in {
+    from {
+        opacity: 0;
+        transform: scale(.82);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes journey-arrow-in {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .journey-reveal,
+    .journey-icon,
+    .journey-arrow,
+    .btn-arrow {
+        animation: none;
+    }
+
+    .journey-reveal {
+        stroke-dashoffset: 0;
+    }
+
+    .journey-icon,
+    .journey-arrow {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* questions header */
+.white-backdrop {
+    position: relative;
+    background-color: var(--color-light);
+    padding-bottom: 30px;
+    border-radius: 50px;
+    margin-inline: auto;
+    padding-top: 30px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+    width: min(100%, var(--panel-width));
+    z-index: 1;
+}
+
+/* bottom info section */
+.page-info {
+    padding: 5px;
+    border: 1px dashed #808285;
+    min-height: 7em;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border-radius: 20px;
+}
+
+/* Shared Journey: Content Width and Visibility */
+.journey-page .content-area {
+    width: 100%;
+    max-width: 540px;
+    padding-inline: 24px;
+}
+
+.journey-page [hidden] {
+    display: none !important;
+}
+
+/* Shared Journey: Page Frame */
+.journey-page {
+    --panel-radius: 50px;
+    --step-active-size: 64px;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: color-mix(in srgb, var(--color-dark) 5%, var(--color-light));
+    color: var(--color-black);
+    font-family: var(--brand-font);
+    letter-spacing: 0;
+}
+
+.journey-page :is(button, input, p, h1, h2, label) {
+    font-family: var(--brand-font);
+    letter-spacing: 0;
+}
+
+.journey-page .page-scene {
+    position: relative;
+    isolation: isolate;
+    flex: 1;
+    margin-bottom: 3em;
+}
+
+/* Shared Journey: Foreground Layout */
+.journey-page .page-heading {
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+}
+
+.journey-page .page-heading::before {
+    content: "";
+    position: absolute;
+    inset: -80px 0 calc(-1 * var(--panel-radius));
+    z-index: -1;
+    pointer-events: none;
+    bottom: calc(-2* var(--panel-radius) - 12px);
+}
+
+.journey-page .page-title {
+    margin: 0;
+    padding: 0;
+    color: var(--color-light) !important;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.journey-page .page-subtitle {
+    margin: 0;
+    padding: 0;
+    color: var(--color-light);
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.journey-page .white-backdrop {
+    position: relative;
+    width: min(100%, 800px);
+    margin-inline: auto;
+    padding: 0;
+    background: var(--color-light);
+    border-radius: var(--panel-radius);
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Shared Photo Layout: Questions and Results */
+.photo-page .page-scene {
+    padding-top: 142px;
+}
+
+.photo-page .page-background {
+    position: absolute;
+    inset: 0 0 auto;
+    height: calc(272px + var(--panel-radius));
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.photo-page .page-heading {
+    padding: 0 16px 12px;
+}
+
+.photo-page .page-heading::before {
+    background-image: linear-gradient(180deg,
+        transparent 0%,
+        color-mix(in srgb, var(--color-secondary) 68%, transparent) 48%,
+        var(--color-primary) 100%);
+}
+
+/* Questions: Space for the Active Progress Icon */
+#questions-page .page-heading {
+    padding-bottom: calc(var(--step-active-size) / 2 + 12px);
+}
+
+#questions-page .white-backdrop {
+    padding: calc(var(--step-active-size) / 2 + 30px) 0 32px;
+}
+
+/* Results: Introductory Panel Spacing */
+#results-page .white-backdrop {
+    padding-block: 24px 30px;
+}
+
+/* Questions: Progress Icons */
+.journey-page .quiz-progress {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    right: 12px;
+    height: var(--step-active-size);
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) repeat(6, minmax(0, 1fr));
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: translateY(-50%);
+    transition: grid-template-columns 180ms ease;
+}
+
+.journey-page .quiz-progress li {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+
+.journey-page .quiz-step {
+    position: relative;
+    display: block;
+    width: min(100%, 32px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--color-light);
+    filter: drop-shadow(0 2px 2px color-mix(in srgb, var(--color-black) 20%, transparent));
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    transition: width 180ms ease;
+}
+
+.journey-page .is-current .quiz-step {
+    width: min(100%, var(--step-active-size));
+}
+
+.journey-page .quiz-step-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.journey-page .is-upcoming .quiz-step-image {
+    filter: grayscale(1);
+    opacity: .65;
+}
+
+.journey-page .quiz-step-tick {
+    position: absolute;
+    right: -2px;
+    bottom: -1px;
+    width: 16px;
+    height: auto;
+    display: none;
+}
+
+.journey-page .is-complete .quiz-step-tick {
+    display: block;
+}
+
+/* Questions: Answers and Next Button */
+.journey-page .quiz-question {
+    float: none;
+    width: 100%;
+    min-height: 3.6em;
+    margin: 0 0 24px;
+    padding: 0;
+    color: var(--color-black);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.journey-page .quiz-answers {
+    display: grid;
+    gap: 14px;
+}
+
+.journey-page .quiz-answer {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.journey-page .quiz-answer-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.journey-page .quiz-answer-copy {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 9px 14px;
+    border: 1px solid color-mix(in srgb, var(--color-dark) 65%, var(--color-light));
+    border-radius: 16px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.journey-page .quiz-answer:hover .quiz-answer-copy,
+.journey-page .quiz-answer-input:checked + .quiz-answer-copy {
+    border-color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 8%, var(--color-light));
+}
+
+.journey-page .quiz-answer-input:focus-visible + .quiz-answer-copy,
+.journey-page .quiz-next:focus-visible,
+.journey-page .reaction-button:focus-visible {
+    outline: 3px solid var(--color-dark);
+    outline-offset: 3px;
+}
+
+.journey-page .quiz-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.journey-page .quiz-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 75%;
+    min-height: 46px;
+    margin: 0;
+    border: 0;
+    border-radius: 16px;
+    background: var(--main-gradient);
+    color: var(--color-light);
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.journey-page .quiz-next:is(:hover, :focus, :active) {
+    background: var(--main-gradient) !important;
+    color: var(--color-light);
+}
+
+/* Stat Reveal: Header and Gradient */
+#stat-reveal-page {
+    --step-active-size: 80px;
+}
+
+#stat-reveal-page .page-scene {
+    padding-top: 24px;
+}
+
+#stat-reveal-page .page-heading {
+    padding: 0 0 calc(var(--step-active-size) / 2 + 8px);
+}
+
+#stat-reveal-page .page-heading::before {
+    top: -24px;
+    background-image: radial-gradient(circle at bottom, rgb(141, 198, 63) 0%, rgb(80, 184, 72) 24%, rgb(0, 150, 119) 71%, rgb(0, 150, 119) 100%);
+}
+
+#stat-reveal-page :is(.page-title, .page-subtitle) {
+    padding-inline: 16px;
+    font-size: 28px;
+}
+
+.journey-page .selection-banner {
+    width: calc(100% - 96px);
+    margin: 0 0 24px auto;
+    padding: 10px 14px;
+    border-left: 6px solid var(--color-light);
+    background: color-mix(in srgb, var(--color-light) 30%, transparent);
+    text-align: left;
+}
+
+.journey-page .selection-banner p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-light);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.journey-page .selection-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.journey-page .selection-copy {
+    margin-top: 3px !important;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.journey-page .reveal-intro {
+    max-width: 540px;
+    margin: 10px auto 0;
+    padding: 0 24px;
+    color: var(--color-light);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+#stat-reveal-page .white-backdrop {
+    padding-top: calc(var(--step-active-size) / 2 + 30px);
+}
+
+.journey-page .focus-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: var(--step-active-size);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 2px 2px color-mix(in srgb, var(--color-black) 20%, transparent));
+}
+
+.journey-page .focus-icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Stat Reveal: Statistics and Reactions */
+.journey-page .stat-content {
+    display: grid;
+    align-content: start;
+    gap: 36px;
+    min-height: 300px;
+    padding-bottom: 48px;
+    text-align: center;
+}
+
+.journey-page .stat-block {
+    min-width: 0;
+}
+
+.journey-page .stat-placeholder {
+    align-self: center;
+}
+
+.journey-page .stat-value {
+    margin: 0 0 8px;
+    padding: 0;
+    color: var(--color-primary) !important;
+    font-size: 38px;
+    font-weight: 800 !important;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.journey-page .stat-copy {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--color-black);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.journey-page .stat-placeholder .stat-value {
+    font-size: 28px;
+}
+
+.journey-page .stat-reactions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    padding: 12px 16px;
+    border-top: 1px solid color-mix(in srgb, var(--color-dark) 8%, var(--color-light));
+    border-radius: 0 0 var(--panel-radius) var(--panel-radius);
+    align-items: center;
+}
+
+.journey-page .reaction-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+}
+
+.journey-page .reaction-button:hover,
+.journey-page .reaction-button.is-selected {
+    background: color-mix(in srgb, var(--color-primary) 8%, var(--color-light));
+}
+
+.journey-page .reaction-button:disabled {
+    cursor: default;
+}
+
+.journey-page .reaction-emoji,
+.journey-page #reaction-guide li > span:first-child,
+.journey-page .reaction-particle {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+    line-height: 1;
+}
+
+.journey-page .reaction-emoji {
+    font-size: 42px;
+}
+
+.journey-page .reaction-burst {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.journey-page .reaction-particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    will-change: transform, opacity;
+}
+
+/* Shared Journey: Supporting Messages and Footer */
+.journey-page .page-info {
+    width: min(calc(100% - 48px), 412px);
+    min-height: 62px;
+    margin: 34px auto 0;
+    padding: 12px 20px;
+    border: 1px dashed color-mix(in srgb, var(--color-dark) 40%, var(--color-light));
+    border-radius: 20px;
+}
+
+.journey-page .page-info p {
+    margin: 0;
+    padding: 0;
+    color: color-mix(in srgb, var(--color-dark) 65%, var(--color-light));
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.journey-page #question-guide {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+}
+
+.journey-page #reaction-guide {
+    display: block;
+    width: min(calc(100% - 48px), 448px);
+    min-height: 74px;
+    margin-top: 28px;
+    padding: 12px 14px;
+}
+
+.journey-page #reaction-guide ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 6px 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.journey-page #reaction-guide li {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    color: color-mix(in srgb, var(--color-dark) 65%, var(--color-light));
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.journey-page #reaction-guide li > span:first-child {
+    font-size: 22px;
+}
+
+/* Reaction Pack: Buttons, Guide and Floating Images */
+.journey-page .reaction-emoji img,
+.journey-page #reaction-guide li > span:first-child img,
+.journey-page .reaction-particle img {
+    display: block;
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
+.journey-page .page-message {
+    max-width: 540px;
+    margin: 20px auto 0;
+    padding-inline: 24px;
+    color: var(--color-dark);
+    font-size: 14px;
+}
+
+/* XS mobile rules */
+@media (min-width:0px) and (max-width:400px){
+    .hero-stage {
+        width: min(100%, 240px) !important;
+    }
+
+    .headline-holder h1 {
+        font-size: 24px;
+        font-size: min(24px, 9.3cqi);
+    }
+}
+
+/* Mobile rules */
+@media (min-width:400px) and (max-width:767px) {
+    .hero-stage {
+        width: min(100%, 260px);
+    }
+
+    .headline-holder h1 {
+        font-size: 32px;
+        font-size: min(32px, 9.3cqi);
+    }
+
+    .brand-logo {
+        width: 62px;
+        left: 24px;
+    }
+
+    .journey-page {
+        --step-active-size: clamp(80px, calc(80px + (100vw - 400px) / 6), 100px);
+    }
+
+    #stat-reveal-page {
+        --step-active-size: clamp(80px, calc(80px + (100vw - 400px) / 6), 100px);
+    }
+
+    .journey-page :is(.page-title, .page-subtitle) {
+        font-size: 32px;
+    }
+
+    .photo-page .page-scene {
+        padding-top: 190px;
+    }
+
+    .photo-page .page-background {
+        height: calc(340px + var(--panel-radius));
+    }
+
+    #questions-page .white-backdrop {
+        padding-bottom: 36px;
+    }
+
+    .journey-page .quiz-progress {
+        left: clamp(20px, calc(20px + (100vw - 400px) / 15), 28px);
+        right: clamp(20px, calc(20px + (100vw - 400px) / 15), 28px);
+        gap: clamp(6px, calc(6px + (100vw - 400px) / 60), 8px);
+    }
+
+    .journey-page .quiz-step {
+        width: min(100%, clamp(40px, calc(40px + (100vw - 400px) / 15), 48px));
+    }
+
+    .journey-page .quiz-question {
+        font-size: 20px;
+        min-height: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .journey-page .quiz-answer {
+        font-size: 15px;
+    }
+
+    #stat-reveal-page .page-scene {
+        padding-top: 34px;
+    }
+
+    #stat-reveal-page .page-heading::before {
+        top: -34px;
+    }
+
+    #stat-reveal-page :is(.page-title, .page-subtitle) {
+        font-size: 32px;
+    }
+
+    .journey-page .selection-banner {
+        width: calc(100% - 136px);
+    }
+
+    .journey-page .selection-copy {
+        font-size: 15px;
+    }
+
+    .journey-page .reveal-intro {
+        font-size: 16px;
+    }
+
+    .journey-page .stat-value {
+        font-size: 44px;
+    }
+
+    .journey-page .stat-placeholder .stat-value {
+        font-size: 30px;
+    }
+
+    .journey-page .stat-copy {
+        font-size: 20px;
+    }
+
+    .journey-page .reaction-emoji {
+        font-size: 46px;
+    }
+
+    .journey-page #reaction-guide {
+        padding-inline: 24px;
+    }
+
+    .journey-page #reaction-guide li {
+        font-size: 13px;
+    }
+}
+
+/* Desktop rules */
+@media (min-width:768px) {
+    .headline-holder h1 {
+        font-size: 36px;
+    }
+
+    .result-cards,
+    #results-page .closing-section {
+        width: min(calc(100% - 48px), 800px) !important;
+    }
+
+    .brand-logo {
+        width: 72px;
+        left: 32px;
+    }
+
+    .white-backdrop {
+        width: min(calc(100% - 48px), var(--panel-width));
+    }
+
+    .journey-page {
+        --step-active-size: 100px;
+    }
+
+    #stat-reveal-page {
+        --step-active-size: 100px;
+    }
+
+    .journey-page .white-backdrop {
+        width: min(calc(100% - 48px), 800px);
+    }
+
+    .journey-page .page-title {
+        font-size: 38px;
+    }
+
+    .journey-page .page-subtitle {
+        font-size: 34px;
+    }
+
+    .photo-page .page-scene {
+        padding-top: 220px;
+    }
+
+    .photo-page .page-background {
+        height: calc(376px + var(--panel-radius));
+    }
+
+    #questions-page .white-backdrop {
+        padding-bottom: 36px;
+    }
+
+    .journey-page .quiz-progress {
+        left: 28px;
+        right: 28px;
+        gap: 8px;
+    }
+
+    .journey-page .quiz-step {
+        width: min(100%, 48px);
+    }
+
+    .journey-page .quiz-question {
+        font-size: 20px;
+        min-height: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .journey-page .quiz-answer {
+        font-size: 15px;
+    }
+
+    #stat-reveal-page .page-scene {
+        padding-top: 34px;
+    }
+
+    #stat-reveal-page .page-heading::before {
+        top: -34px;
+    }
+
+    #stat-reveal-page :is(.page-title, .page-subtitle) {
+        font-size: 32px;
+    }
+
+    .journey-page .selection-banner {
+        width: min(calc(100% - 136px), 760px);
+        margin-left: max(136px, calc((100% - 760px) / 2));
+        margin-right: auto;
+    }
+
+    .journey-page .selection-copy {
+        font-size: 15px;
+    }
+
+    .journey-page .reveal-intro {
+        font-size: 16px;
+    }
+
+    .journey-page .stat-value {
+        font-size: 44px;
+    }
+
+    .journey-page .stat-placeholder .stat-value {
+        font-size: 30px;
+    }
+
+    .journey-page .stat-copy {
+        font-size: 20px;
+    }
+
+    .journey-page .reaction-emoji {
+        font-size: 46px;
+    }
+
+    .journey-page #reaction-guide {
+        padding-inline: 24px;
+    }
+
+    .journey-page #reaction-guide li {
+        font-size: 13px;
+    }
+
+    .hero-stage {
+        width: min(100%, 365px) !important;
+        margin-inline: auto;
+        margin-top: calc(-1 * var(--hero-crop));
+    }
+}
+
+/* Journey Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .journey-page .quiz-progress,
+    .journey-page .quiz-step,
+    .journey-page .quiz-answer-copy,
+    .journey-page .reaction-button {
+        transition: none;
+    }
+}
+
+/* results page */
+#results-page.photo-page {
+    background-color: var(--color-light);
+}
+
+.strongest {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 15px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#foundation-name {
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.strongest p {
+    color: var(--color-light);
+}
+
+/* foundation cards */
+.result-cards {
+    margin-inline: auto;
+    background: #F1F2F2;
+    border-radius: 0px 0px 60px 60px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-feature img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: var(--color-light);
+    min-height: 5em;
+    border-radius: 0px 0px 30px 30px;
+    margin-top: 15px;
+    border: 1px solid #dcddde;
+}
+
+.result-progress {
+    --duration: 1.2s;
+    padding: 15px 32px 20px;
+}
+
+.result-progress-track {
+    height: 18px;
+    background-color: #dadcdd;
+    border-radius: 999px;
+}
+
+.result-progress-fill {
+    position: relative;
+    width: var(--progress);
+    height: 100%;
+    background-color: var(--color-secondary);
+    border-radius: inherit;
+    animation: result-progress-fill var(--duration) ease-out both;
+}
+
+.result-progress-fill::before {
+    content: "";
+    position: absolute;
+    inset: 3px 7px auto;
+    height: 6px;
+    background-color: #98E292;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px #ffffff40;
+}
+
+.result-progress-star,
+.result-progress-burst {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.result-progress-star {
+    width: 30px;
+    height: 30px;
+    max-width: none;
+    z-index: 1;
+}
+
+/* progress bar animation */
+.result-progress-burst {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    background-color: #fff200;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: result-progress-burst .75s ease-out both;
+    animation-delay: calc(var(--duration) + var(--delay));
+}
+
+.result-progress-burst:nth-of-type(1) {
+    --x: -20px;
+    --y: -26px;
+    --delay: 0s;
+}
+
+.result-progress-burst:nth-of-type(2) {
+    --x: 8px;
+    --y: -32px;
+    --delay: .08s;
+}
+
+.result-progress-burst:nth-of-type(3) {
+    --x: 22px;
+    --y: -14px;
+    --delay: .16s;
+}
+
+.result-progress-burst:nth-of-type(4) {
+    --x: 20px;
+    --y: 26px;
+    --delay: .12s;
+}
+
+.result-progress-burst:nth-of-type(5) {
+    --x: -16px;
+    --y: 30px;
+    --delay: .04s;
+}
+
+@keyframes result-progress-fill {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: var(--progress);
+    }
+}
+
+@keyframes result-progress-burst {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.2);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .result-progress-fill {
+        animation: none;
+    }
+
+    .result-progress-burst {
+        display: none;
+    }
+}
+
+.level .level-name {
+    font-family: var(--brand-font);
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.level-badge {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card .body {
+    padding: 10px 32px 20px;
+}
+
+.card .level-copy {
+    font-size: 0.9rem;
+    padding-top: 5px;
+}
+
+.vault22 {
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    display: inline-flex;
+    margin-top: 15px;
+}
+
+.vault22 .thinker {
+    background-color: var(--color-light);
+    border-radius: 25px 0px 0px 25px;
+    width: 13em;
+    display: flex;
+    justify-content: center;
+}
+
+.thinker img {
+    width: 1.5em;
+    height: auto;
+}
+
+.vault22 p {
+    font-size: 0.9rem;
+    color: var(--color-light);
+    margin: 0;
+    padding: 10px 5px;
+}
+
+/* Results: Closing Section and Next Steps */
+#results-page .closing-section {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+    padding: 32px 20px 0;
+    text-align: center;
+}
+
+#results-page .closing-section h3 {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--color-black);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+#results-page .closing-section p {
+    max-width: 640px;
+    margin: 10px auto 0;
+    color: var(--color-dark);
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+#results-page .closing-section h5 {
+    margin: 32px 0 12px;
+    font-family: var(--brand-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+#results-page .final-cta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 640px;
+    margin-inline: auto;
+}
+
+#results-page .closing-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 8px;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 14px;
+    background: var(--color-light);
+    color: var(--color-primary);
+    font-family: var(--brand-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#results-page .closing-action img {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    object-fit: contain;
+}
+
+#results-page .closing-action:hover {
+    background: inherit;
+    color: var(--color-primary);
+    transform: scale(1.01);
+}
+
+#results-page .closing-action:focus-visible,
+#results-page .adviser-cta:focus-visible,
+#results-page .snapshot-submit:focus-visible,
+#results-page .closing-modal .btn-close:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+#results-page .closing-section .adviser-copy {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+#results-page .adviser-cta,
+#results-page .snapshot-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: min(100%, 324px);
+    min-height: 44px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    border-radius: 16px;
+    color: var(--color-light);
+    font-size: 14px;
+    line-height: 1.25;
+    text-decoration: none;
+}
+
+/* Results: Snapshot and Sharing Modals */
+#results-page .closing-modal .modal-dialog {
+    width: min(calc(100% - 40px), 480px);
+    max-width: none;
+    margin-inline: auto;
+}
+
+#results-page .closing-modal .modal-content {
+    position: relative;
+    padding: 28px 32px 16px;
+    border: 0;
+    border-radius: 24px;
+    background: var(--color-light);
+    box-shadow: 0 5px 20px color-mix(in srgb, var(--color-black) 15%, transparent);
+}
+
+#results-page .closing-modal .btn-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+#results-page .closing-modal-title {
+    margin: 0 0 16px;
+    padding: 0 16px;
+    color: var(--color-black) !important;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+#results-page .snapshot-fields {
+    display: grid;
+    gap: 12px;
+}
+
+#results-page .snapshot-input {
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid color-mix(in srgb, var(--color-dark) 45%, var(--color-light));
+    border-radius: 16px;
+    background: var(--color-light);
+    color: var(--color-black);
+    font-family: var(--brand-font);
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+#results-page .snapshot-input::placeholder {
+    color: color-mix(in srgb, var(--color-dark) 35%, var(--color-light));
+    opacity: 1;
+}
+
+#results-page .snapshot-input:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+#results-page .snapshot-submit {
+    margin-top: 18px;
+}
+
+#results-page:has(.closing-modal.show) .modal-backdrop {
+    background: var(--color-light);
+    opacity: 0.35;
+}
+
+/* Results: Extra-Small Closing Layout */
+@media (min-width:0px) and (max-width:400px){
+    #results-page .final-cta {
+        grid-template-columns: 1fr;
+    }
+
+    #results-page .closing-section h3 {
+        font-size: 20px;
+    }
+
+    #results-page .closing-modal .modal-content {
+        padding-inline: 20px;
+    }
+
+    #results-page .closing-modal-title {
+        font-size: 20px;
+    }
+}
+
